@@ -21,6 +21,10 @@ RSpec.describe StringCalculator do
         it 'handles new lines between numbers' do
             expect(calculator.add('1\n2,3')).to eq(6)
         end
+
+        it 'returns an error for invalid input' do
+            expect { calculator.add("1,\n") }.to raise_error(ArgumentError)
+        end
     end
     
 
