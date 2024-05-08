@@ -3,7 +3,7 @@ class StringCalculator
         if string.empty?
             0
         else
-            string.split(',').map(&:to_i).sum
+            string.gsub('\n', ',').split(',').map(&:to_i).sum
         end
     end
 end
