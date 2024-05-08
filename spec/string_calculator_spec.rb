@@ -1,3 +1,6 @@
+require 'rails_helper'
+require_relative '../lib/string_calculator.rb'
+
 RSpec.describe StringCalculator do
 
     describe '#add_string' do 
