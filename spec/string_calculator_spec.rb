@@ -25,6 +25,11 @@ RSpec.describe StringCalculator do
         it 'returns an error for invalid input' do
             expect { calculator.add("1,\n") }.to raise_error(ArgumentError)
         end
+
+        it 'handles specific regex with delim provided' do
+            expect { calculator.add("//;\n1;2") }.to eq(3)
+        end
+
     end
     
 
