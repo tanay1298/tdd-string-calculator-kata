@@ -15,6 +15,7 @@ class StringCalculator
             if negative_numbers.any?
                 raise RuntimeError, "negative numbers not allowed: #{negative_numbers.join(", ")}"
             else
+                numbers = numbers.select { |num| num <= 1000 }
                 numbers.sum
             end
         end
