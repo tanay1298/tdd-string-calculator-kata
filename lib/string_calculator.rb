@@ -7,6 +7,7 @@ class StringCalculator
         else
             if string.start_with?("//")
                 delimiter, numbers = string[2..-1].split("\n")
+                delimiter = delimiter.gsub(/[\[\]]/, '')
                 numbers = numbers.split(delimiter).map(&:to_i)
             else
                 numbers = string.gsub('\n', ',').split(',').map(&:to_i)
