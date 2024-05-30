@@ -48,5 +48,10 @@ RSpec.describe StringCalculator do
     it 'handles multiple delimiters' do
       expect(calculator.add("//[*][%]\n1*2%3")).to eq(6)
     end
+
+    it 'does multiplication on custom delim *' do 
+      expect(calculator.add("//*\n4*2")).to eq(8)
+    end 
+
   end
 end
